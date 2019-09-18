@@ -1,0 +1,86 @@
+version: '3'
+
+services:
+
+
+  wicked-api:
+    image: ""
+    volumes:
+    deploy:
+      mode: replicated
+    environment:
+      XXX: xxx
+
+
+  wicked-ui:
+    image: "haufelexware/wicked.ui:latest"
+    volumes:
+    deploy:
+      mode: replicated
+    environment:
+      XXX: xxx
+
+  wicked-kong-adapter:
+    image: ""
+    volumes:
+    deploy:
+      mode: replicated
+    environment:
+      XXX: xxx
+
+  wicked-auth-server:
+    image: ""
+    volumes:
+    deploy:
+      mode: replicated
+    environment:
+      XXX: xxx
+
+  wicked-chatbox:
+    image: ""
+    volumes:
+    deploy:
+      mode: replicated
+    environment:
+      XXX: xxx
+
+  wicked-mailer:
+    image: ""
+    volumes:
+    deploy:
+      mode: replicated
+    environment:
+      XXX: xxx
+
+  wicked-kong:
+    image: ""
+    volumes:
+    deploy:
+      mode: replicated
+    environment:
+      XXX: xxx
+
+  wicked-redis:
+    image: ""
+    volumes:
+    deploy:
+      mode: replicated
+    environment:
+      XXX: xxx
+
+  wicked-pg:
+    image: "postgres:11"
+    volumes:
+      - my_dbdata:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: example
+    deploy:
+      mode: replicated
+
+
+networks:
+  proxy_net:
+    external: true
+
+volumes:
+  my_dbdata:
